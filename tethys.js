@@ -199,7 +199,17 @@
                     el.style.display = 'none';
                 };
             });
-        }
+        },
+        // 查找parent dom节点
+        parent: function(cls){
+            var p;
+
+            this.each(function(el){
+                p = el.parentElement;
+            });
+
+            return p;
+        },
 
     };
 
