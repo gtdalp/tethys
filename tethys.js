@@ -193,12 +193,7 @@
       
         // 隐藏
         hide: function(){
-            return this.each(function(el){
-                if(el.style.display !== 'none') {
-                    el.setAttribute('o-d', el.style.display);
-                    el.style.display = 'none';
-                };
-            });
+            return this.css('display', 'none');
         }
 
     };
