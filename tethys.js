@@ -174,7 +174,19 @@
         removeClass: function(cls){
             return this.addClass(cls, 'remove');
         },
+        
+        // 切换class
+        toggleClass: function(cls){
 
+            if (typeof cls !== 'string') return this;
+
+            if (this.hassClass(cls)) {
+                return this.addClass(cls);
+            }
+
+            return this.removeClass(cls);
+        },
+      
         // 设置html
         html: function(html){
             return this.each(function(el){
